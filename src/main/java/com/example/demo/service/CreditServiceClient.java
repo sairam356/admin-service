@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.example.demo.dto.UserDTO;
-@LoadBalancerClient(name ="credit-service")
-@FeignClient(name ="credit-service/credit")
+@LoadBalancerClient(name ="CREDIT-SERVICE")
+@FeignClient(name ="CREDIT-SERVICE/credit")
 public interface CreditServiceClient {
 
     @PostMapping
