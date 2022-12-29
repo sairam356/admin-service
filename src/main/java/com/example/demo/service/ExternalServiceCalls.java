@@ -78,8 +78,10 @@ public class ExternalServiceCalls {
 				//	logger.info("Thread " + Thread.currentThread().getName());
 					HttpHeaders headers = new HttpHeaders();
 					headers.add("Authorization", "Bearer " + userInfo.getAccess_token());
+					
 					 HttpEntity request = new HttpEntity(userInfo,headers);
-					return restTemplate.postForObject(debitURL, request, Map.class);
+					//return restTemplate.postForObject(debitURL, request, Map.class);
+					return restTemplate.postForObject("https://debit-service-test-kushalbajji-dev.apps.sandbox.x8i5.p1.openshiftapps.com/debit", request, Map.class);
 				}
 			});
 		} catch (Exception e) {
