@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.example.demo.dto.UserDTO;
 
-@FeignClient(name ="CREDIT-SERVICE/credit")
+@FeignClient(name ="https://credit-service-test-kushalbajji-dev.apps.sandbox.x8i5.p1.openshiftapps.com/credit")
 public interface CreditServiceClient {
 
     @PostMapping
