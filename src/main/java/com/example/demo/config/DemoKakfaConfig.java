@@ -47,7 +47,6 @@ public class DemoKakfaConfig {
 				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE).build();
 	}
 	
-	@LoadBalanced
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
